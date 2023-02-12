@@ -43,6 +43,6 @@ class SelectorConfig {
     this.setSelectorButtonAsPrefixIcon = false,
     this.leadingPadding,
     this.trailingSpace = true,
-    this.labelText = "",
+    this.labelText = "Vyhledejte zemi dle názvu nebo předvolby",
   });
 }

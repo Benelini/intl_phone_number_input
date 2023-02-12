@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/src/models/country_model.dart';
 import 'package:intl_phone_number_input/src/utils/test/test_helper.dart';
 import 'package:intl_phone_number_input/src/utils/util.dart';
+import "../utils/selector_config.dart";
 
 /// Creates a list of Countries with a search textfield.
 class CountrySearchListWidget extends StatefulWidget {
@@ -12,7 +13,6 @@ class CountrySearchListWidget extends StatefulWidget {
   final bool autoFocus;
   final bool? showFlags;
   final bool? useEmoji;
-  final String labelText;
 
   CountrySearchListWidget(
     this.countries,
@@ -22,7 +22,6 @@ class CountrySearchListWidget extends StatefulWidget {
     this.showFlags,
     this.useEmoji,
     this.autoFocus = false,
-    this.labelText = "",
   });
 
   @override
@@ -54,7 +53,7 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
   /// Returns [InputDecoration] of the search box
   InputDecoration getSearchBoxDecoration() {
     return widget.searchBoxDecoration ??
-        InputDecoration(labelText: widget.labelText);
+        InputDecoration(labelText: "Vyhledejte zemi dle názvu nebo předvolby");
   }
 
   @override
