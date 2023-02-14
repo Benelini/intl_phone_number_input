@@ -14,6 +14,7 @@ class CountrySearchListWidget extends StatefulWidget {
   final bool? showFlags;
   final bool? useEmoji;
   final String? labelText;
+  final SelectorConfig selectorConfig;
 
   CountrySearchListWidget(
     this.countries,
@@ -24,6 +25,7 @@ class CountrySearchListWidget extends StatefulWidget {
     this.useEmoji,
     this.autoFocus = false,
     this.labelText,
+    this.selectorConfig = const SelectorConfig(),
   });
 
   @override
@@ -55,7 +57,7 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
   /// Returns [InputDecoration] of the search box
   InputDecoration getSearchBoxDecoration() {
     return widget.searchBoxDecoration ??
-        InputDecoration(labelText: widget.labelText);
+        InputDecoration(labelText: widget.selectorConfig.labelText);
   }
 
   @override
