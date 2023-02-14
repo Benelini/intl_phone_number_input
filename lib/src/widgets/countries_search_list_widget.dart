@@ -97,6 +97,7 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
                 locale: widget.locale,
                 showFlags: widget.showFlags!,
                 useEmoji: widget.useEmoji!,
+                labelText: widget.labelText!,
               );
               // return ListTile(
               //   key: Key(TestHelper.countryItemKeyValue(country.alpha2Code)),
@@ -141,13 +142,14 @@ class DirectionalCountryListTile extends StatelessWidget {
   final String? locale;
   final bool showFlags;
   final bool useEmoji;
-
+  final String? labelText;
   const DirectionalCountryListTile({
     Key? key,
     required this.country,
     required this.locale,
     required this.showFlags,
     required this.useEmoji,
+    required this.labelText,
   }) : super(key: key);
 
   @override
