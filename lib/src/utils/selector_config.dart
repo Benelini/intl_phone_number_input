@@ -33,7 +33,7 @@ class SelectorConfig {
   /// Add white space for short dial code
   final bool trailingSpace;
 
-  final String labelText;
+  final String? labelText;
 
   const SelectorConfig({
     this.selectorType = PhoneInputSelectorType.DROPDOWN,
@@ -43,6 +43,6 @@ class SelectorConfig {
     this.setSelectorButtonAsPrefixIcon = false,
     this.leadingPadding,
     this.trailingSpace = true,
-    this.labelText = "Vyhledejte zemi dle názvu nebo předvolby",
+    this.labelText = "Search country by name or dial code",
   });
 }

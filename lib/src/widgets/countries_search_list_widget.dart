@@ -13,6 +13,7 @@ class CountrySearchListWidget extends StatefulWidget {
   final bool autoFocus;
   final bool? showFlags;
   final bool? useEmoji;
+  final String? labelText;
 
   CountrySearchListWidget(
     this.countries,
@@ -22,6 +23,7 @@ class CountrySearchListWidget extends StatefulWidget {
     this.showFlags,
     this.useEmoji,
     this.autoFocus = false,
+    this.labelText,
   });
 
   @override
@@ -53,7 +55,7 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
   /// Returns [InputDecoration] of the search box
   InputDecoration getSearchBoxDecoration() {
     return widget.searchBoxDecoration ??
-        InputDecoration(labelText: "Vyhledejte zemi dle názvu nebo předvolby");
+        InputDecoration(labelText: widget.labelText);
   }
 
   @override
