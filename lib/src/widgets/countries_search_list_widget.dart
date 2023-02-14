@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/src/models/country_model.dart';
 import 'package:intl_phone_number_input/src/utils/test/test_helper.dart';
 import 'package:intl_phone_number_input/src/utils/util.dart';
-import "../utils/selector_config.dart";
 
 /// Creates a list of Countries with a search textfield.
 class CountrySearchListWidget extends StatefulWidget {
@@ -14,7 +13,6 @@ class CountrySearchListWidget extends StatefulWidget {
   final bool? showFlags;
   final bool? useEmoji;
   final String? labelText;
-  final SelectorConfig selectorConfig;
 
   CountrySearchListWidget(
     this.countries,
@@ -25,7 +23,6 @@ class CountrySearchListWidget extends StatefulWidget {
     this.useEmoji,
     this.autoFocus = false,
     this.labelText,
-    this.selectorConfig = const SelectorConfig(),
   });
 
   @override
@@ -57,7 +54,7 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
   /// Returns [InputDecoration] of the search box
   InputDecoration getSearchBoxDecoration() {
     return widget.searchBoxDecoration ??
-        InputDecoration(labelText: widget.selectorConfig.labelText);
+        InputDecoration(labelText: widget.labelText);
   }
 
   @override
@@ -97,7 +94,6 @@ class _CountrySearchListWidgetState extends State<CountrySearchListWidget> {
                 locale: widget.locale,
                 showFlags: widget.showFlags!,
                 useEmoji: widget.useEmoji!,
-                labelText: widget.labelText!,
               );
               // return ListTile(
               //   key: Key(TestHelper.countryItemKeyValue(country.alpha2Code)),
@@ -142,14 +138,12 @@ class DirectionalCountryListTile extends StatelessWidget {
   final String? locale;
   final bool showFlags;
   final bool useEmoji;
-  final String? labelText;
   const DirectionalCountryListTile({
     Key? key,
     required this.country,
     required this.locale,
     required this.showFlags,
     required this.useEmoji,
-    required this.labelText,
   }) : super(key: key);
 
   @override

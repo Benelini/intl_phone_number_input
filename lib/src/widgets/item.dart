@@ -11,7 +11,6 @@ class Item extends StatelessWidget {
   final bool withCountryNames;
   final double? leadingPadding;
   final bool trailingSpace;
-  final String? labelText;
 
   const Item({
     Key? key,
@@ -22,7 +21,6 @@ class Item extends StatelessWidget {
     this.withCountryNames = false,
     this.leadingPadding = 12,
     this.trailingSpace = true,
-    this.labelText,
   }) : super(key: key);
 
   @override
