@@ -134,6 +134,7 @@ class SelectorButton extends StatelessWidget {
               showFlags: selectorConfig.showFlags,
               useEmoji: selectorConfig.useEmoji,
               autoFocus: autoFocusSearchField,
+              labelText: selectorConfig.labelText,
             ),
           ),
         ),
@@ -182,6 +183,7 @@ class SelectorButton extends StatelessWidget {
                       showFlags: selectorConfig.showFlags,
                       useEmoji: selectorConfig.useEmoji,
                       autoFocus: autoFocusSearchField,
+                      labelText: selectorConfig.labelText,
                     ),
                   ),
                 );
