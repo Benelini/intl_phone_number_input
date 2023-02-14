@@ -43,6 +43,6 @@ class SelectorConfig {
     this.setSelectorButtonAsPrefixIcon = false,
     this.leadingPadding,
     this.trailingSpace = true,
-    this.labelText = "Search country by name or dial code",
+    this.labelText,
   });
 }
